@@ -1,0 +1,25 @@
+@import './reset.scss';
+@import './colors.scss';
+@import './mixins.scss';
+@import './fonts.scss';
+@import './variables.scss';
+
+// layout 
+@import './layout/home-page.scss';
+
+//components 
+@import './components/common.scss';
+@import './components/header.scss';
+@import './components/logo.scss';
+@import './components//burger-menu.scss';
+@import './components/nav.scss';
+@import './components/button.scss';
+@import './components/footer.scss';
+@import './components/socials.scss';
+
+//sections
+@import './sections/marketing.scss';
+@import './sections/parnters.scss';
+@import './sections/about.scss';
+@import './sections/services.scss';
+@import './sections/choise.scss';

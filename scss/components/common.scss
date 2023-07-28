@@ -1,0 +1,50 @@
+.title {
+    @include font-style($exo, 44px, 700, $main);
+        
+    line-height: 140%;
+    &--small {
+        font-size: 32px;
+    }
+    &--white {
+        color: $white;
+    }
+}
+
+.underline {
+    position: relative;
+    &::after {
+        content: '';
+        position: absolute;
+        left: -2px;
+        bottom: 5px;
+        z-index: -1;
+        width: 102%;
+        height: 12px;
+        border-radius: 21px;
+        background-color: $bg-color-secondary;
+    }
+    &--small {
+        &::after {
+            left: 0;
+            bottom: 6px;
+            width: 100%;
+            height: 10px;
+        }
+    }
+}
+
+@media (max-width: 1023px) {
+    .title {
+        font-size: 28px;
+        &--small {
+            font-size: 24px;
+        }
+    }
+    .underline {
+        &--small {
+            &::after {
+                bottom: 3px;
+            }
+        }
+    }
+}

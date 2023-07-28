@@ -1,0 +1,25 @@
+.button {
+    @include font-style($open-sans, 16px, 700, $white);
+
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .3s;
+    &--main {
+        background-color: $bg-color-main;
+        &:hover {
+            background-color: lighten($color: $bg-color-main, $amount: 10%);
+        }
+        &:focus {
+            background-color: darken($color: $bg-color-main, $amount: 5%);
+        }
+    }
+    &--secondary {
+        background-color: $bg-color-secondary;
+        &:hover {
+            background-color: darken($color: $bg-color-secondary, $amount: 5%);
+        }
+        &:focus {
+            background-color: darken($color: $bg-color-secondary, $amount: 10%);
+        }
+    }
+}

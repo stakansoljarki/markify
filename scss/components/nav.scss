@@ -1,0 +1,31 @@
+.nav {
+    
+    &__list {
+        display: flex;
+        gap: 46px;
+    }
+    &__link {
+        @include font-style($open-sans, 16px, 600, $secondary);
+
+        display: block;
+        transition: .3s;
+        &:hover {
+            transform: scale(1.1);
+            color: darken($color: $secondary, $amount: 10%)
+        }
+        &:focus {
+            color: darken($color: $secondary, $amount: 15%);
+        }
+    }
+
+    @media (max-width: 767px) {
+        margin-right: 0;
+        &__list {
+            flex-direction: column;
+            gap: 24px;
+        }
+        &__link {
+            text-align: center;
+        }
+    }
+}

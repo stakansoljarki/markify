@@ -1,0 +1,84 @@
+.marketing {
+    margin-bottom: 265px;
+
+    &__header {
+        margin-bottom: 42px;
+        padding: 24px 0;
+    }
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 50px;
+        margin-bottom: 40px;
+    }
+    &__img-wrap {
+        width: 100%;
+        max-width: 461px;
+    }
+    &__info {
+        max-width: 558px;
+    }
+    &__title {
+        margin-bottom: 28px;
+    }
+    &__description {
+        @include font-style($open-sans, 16px, 400, $secondary);
+
+        line-height: 150%;
+    }
+    &__lines {
+        position: absolute;
+        left: -5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 102%;
+        height: 180px;
+    }
+    &__line {
+        width: 101%;
+        &--main {
+            position: absolute;
+            z-index: 1;
+            transform: translateX(-5px)  rotate(5deg);
+        }
+        &--secondary {
+            transform: translateX(-5px) rotate(-5deg);
+        }
+    }
+    
+    @media (max-width: 1023px) {
+        &__info {
+            max-width: 50%;
+        }
+    }
+    @media (max-width: 800px) {
+        &__line {
+            &--main {
+                transform: translateX(-5px) rotate(-8deg);
+            }
+            &--secondary {
+                transform: translateX(-5px) rotate(8deg);
+            }
+        }
+    }
+    @media (max-width: 767px) {
+        &__container {
+            flex-direction: column;
+        }
+        &__info {
+            max-width: 100%;
+        }
+    }
+    @media (max-width: 500px) {
+        margin-bottom: 200px;
+
+        &__line {
+            width: 102%;
+        }
+        &__container {
+            margin-bottom: 40px;
+        }
+    }
+}

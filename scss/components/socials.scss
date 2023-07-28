@@ -1,0 +1,14 @@
+.socials {
+    display: flex;
+    gap: 24px;
+
+    &__link {
+        transition: .3s;
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+    &__link-icon {
+        @include size(40px);
+    }
+}

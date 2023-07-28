@@ -1,0 +1,11 @@
+@mixin font-style($family, $size: inherit, $weight, $color: inherit) {
+  font-family: $family;
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+}
+
+@mixin size($size) {
+  width: $size;
+  height: $size;
+}
